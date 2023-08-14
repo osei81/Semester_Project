@@ -1,0 +1,82 @@
+#include <iostream>
+#include <string>
+#include <map>
+
+using namespace std;
+
+void showMainMenu() {
+    cout << "USSD System Mini Console Application\n";
+    cout << "1. Balance Inquiry\n";
+    cout << "2. Data Plan Activation\n";
+    cout << "3. Transaction History\n";
+    cout << "4. Account Recharge\n";
+    cout << "5. Customer Support\n";
+    cout << "0. Exit\n";
+    cout << "Enter option: ";
+}
+
+void performBalanceInquiry() {
+    // Implement balance inquiry logic here
+    cout << "Performing Balance Inquiry...\n";
+}
+
+void performDataPlanActivation() {
+    // Implement data plan activation logic here
+    cout << "Performing Data Plan Activation...\n";
+}
+
+void showTransactionHistory() {
+    // Implement transaction history display logic here
+    cout << "Displaying Transaction History...\n";
+}
+
+void performAccountRecharge() {
+    // Implement account recharge logic here
+    cout << "Performing Account Recharge...\n";
+}
+
+void accessCustomerSupport() {
+    // Implement customer support logic here
+    cout << "Accessing Customer Support...\n";
+}
+
+int main() {
+    map<int, string> ussdCodes = {
+        {1, "Balance Inquiry"},
+        {2, "Data Plan Activation"},
+        {3, "Transaction History"},
+        {4, "Account Recharge"},
+        {5, "Customer Support"}
+    };
+
+    int option;
+    do {
+        showMainMenu();
+        cin >> option;
+
+        switch (option) {
+            case 1:
+                performBalanceInquiry();
+                break;
+            case 2:
+                performDataPlanActivation();
+                break;
+            case 3:
+                showTransactionHistory();
+                break;
+            case 4:
+                performAccountRecharge();
+                break;
+            case 5:
+                accessCustomerSupport();
+                break;
+            case 0:
+                cout << "Exiting USSD System Mini Console Application. Goodbye!\n";
+                break;
+            default:
+                cout << "Invalid option. Please select a valid USSD code.\n";
+        }
+    } while (option != 0);
+
+    return 0;
+}
