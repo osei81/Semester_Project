@@ -1,4 +1,4 @@
-# Semester_Projec
+# Semester_Project
 Osei Agyemang Prempeh Kelvin
 UEB3216922
 IT B
